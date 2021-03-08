@@ -11,7 +11,9 @@ const Users = database.define('users', {
   id: { type: Sequelize.STRING, primaryKey: true },
   first_name: { type: Sequelize.STRING, allowNull: false },
   last_name: { type: Sequelize.STRING, allowNull: false },
-  sub_reddits: { type: Sequelize.ARRAY(Sequelize.STRING), allowNull: false }
+  sub_reddits: { type: Sequelize.ARRAY(Sequelize.STRING), allowNull: false },
+  email_enabled: { type: Sequelize.BOOLEAN, allowNull: false },
+  email_time: { type: Sequelize.STRING, allowNull: false }
 });
 
 module.exports = {
