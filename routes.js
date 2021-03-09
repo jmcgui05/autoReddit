@@ -2,6 +2,14 @@ const express = require('express');
 const router = express.Router();
 const { Users } = require('./database');
 const { v4: uuidv4 } = require('uuid');
+const api = require('./services/api');
+
+// test api service
+// router.post('/reddit', async (req, res) => {
+//   const first_name = 'john';
+//   const sub_reddits = ["technology"];
+//   await api.getTopPosts({first_name, sub_reddits});
+// }) 
 
 // Route users path to create a user
 router.post('/', async(req, res) => {
